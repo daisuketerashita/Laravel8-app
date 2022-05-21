@@ -8,6 +8,11 @@
 </head>
 <body>
     <h1>Greeting</h1>
+    <?php if($errors->any()): ?>
+        <?php foreach($errors->all() as $error): ?>
+            <p style="color: red;"><?php echo $error; ?></p>
+        <?php endforeach; ?>
+    <?php endif; ?>
     <form action="{{ route('welcome') }}" method="post">
         @csrf
         <input type="text" name="username">
