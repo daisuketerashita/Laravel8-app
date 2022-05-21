@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>Hello World!</h1>
-    <p><?php echo $username; ?>さんこんにちは！</p>
+    <p>みなさんこんにちは！</p>
 </body>
 </html>

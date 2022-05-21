@@ -9,7 +9,7 @@ class HelloController extends Controller
 {
     public function index()
     {
-        return view('hello');
+        return view('index');
     }
 
     public function greet()
@@ -21,6 +21,15 @@ class HelloController extends Controller
     {
         $username = $request->input('username');
 
+        $request->session()->put('username',$username);
+
         return view('user',['username' => $username]);
+    }
+
+    public function hello(Request $request)
+    {
+        $username = $request->session()->get('username');
+
+        return view('hello',['username' => $username]);
     }
 }

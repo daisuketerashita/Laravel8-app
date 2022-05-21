@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('/hello',[HelloController::class,'index'])->name('index');
 Route::get('/greet',[HelloController::class,'greet'])->name('greet');
 Route::post('/greet/welcome',[HelloController::class,'welcome'])->name('welcome');
+Route::get('/greet/hello',[HelloController::class,'hello'])->name('hello');
